@@ -2,8 +2,18 @@
 <!--Centriamo la mappa alle nostre coordinate-->
 <google-map [center]="center">  
   <!--Mettiamo un marker alle nostre coordinate-->
-  <map-marker [position]="position" [label]="label" [title]="title">
-  </map-marker>
+  <map-marker [position]="position" 
+  [label]="label" 
+  [title]="title"
+  [options] = "markerOptions">
+  </map-marker> 
+
+  <map-marker [position]="position2" 
+  [label]="label" 
+  [title]="title"
+  [options] = "markerOptions2">
+  </map-marker>   
+     
 
   <map-circle [center]="position"
               [radius]="100"
