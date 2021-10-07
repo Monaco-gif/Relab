@@ -1,45 +1,39 @@
 {{title}}
 <!--Centriamo la mappa alle nostre coordinate-->
-<google-map [center]="center">  
+<google-map [center]="center">
   <!--Mettiamo un marker alle nostre coordinate-->
-  <map-marker [position]="position"  
-  [label]="label" 
-  [title]="title"
-  [options] = "markerOptions">
-  </map-marker> 
-
-  <map-marker [position]="position2" 
-  [options] = "markerOptions2">
-  </map-marker>   
-     
-  <map-marker [position]="position3" 
-
-  [options] = "markerOptions3">
+  <map-marker [position]="position" [label]="label" [title]="title" [options]="markerOptions">
   </map-marker>
 
-  <map-circle [center]="position"
-              [radius]="100"
-              [options] = 'circleOptions'>
+  <map-marker [position]="position2" [options]="markerOptions2">
+  </map-marker>
+
+  <map-marker [position]="position3" [options]="markerOptions3">
+  </map-marker>
+
+  <map-circle [center]="position" [radius]="100" [options]='circleOptions'>
   </map-circle>
-  <map-circle [center]="position"
-              [radius]="50"
-              [options] = 'circleOptions2'>
+  <map-circle [center]="position" [radius]="50" [options]='circleOptions2'>
   </map-circle>
+
+  <map-polygon [paths]="vertices">
+  </map-polygon>
+
+  <map-polygon [paths]="vertices2">
+  </map-polygon>
 </google-map>
 
 <label>Cerchio piu piccolo</label>
-<br/>
-<br/>
+<br />
+<br />
 <button (click)="pink()">pink</button>
 <button (click)="purple()">purple</button>
 <button (click)="orange()">orange</button>
-<br/>
-<br/>
+<br />
+<br />
 <label>Cerchio piu grande</label>
-<br/>
-<br/>
+<br />
+<br />
 <button (click)="yellow()">yellow</button>
 <button (click)="black()">black</button>
 <button (click)="green()">green</button>
-
-
