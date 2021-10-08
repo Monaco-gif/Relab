@@ -19,21 +19,33 @@
   <map-polygon [paths]="vertices">
   </map-polygon>
 
-  <map-polygon [paths]="vertices2">
+  <!--circleOptions è l opzione che serve per poter cabiare i colori-->
+  <map-polygon [paths]="vertices2" [options]='circleOptions3'>
   </map-polygon>
+
 </google-map>
 
 <label>Cerchio piu piccolo</label>
 <br />
 <br />
-<button (click)="pink()">pink</button>
-<button (click)="purple()">purple</button>
-<button (click)="orange()">orange</button>
+<button (click)="yellow()">yellow</button>
+<button (click)="black()">black</button>
+<button (click)="green()">green</button>
+
 <br />
 <br />
 <label>Cerchio piu grande</label>
 <br />
 <br />
-<button (click)="yellow()">yellow</button>
-<button (click)="black()">black</button>
-<button (click)="green()">green</button>
+
+<button (click)="pink()">pink</button>
+<button (click)="purple()">purple</button>
+<button (click)="orange()">orange</button>
+<br />
+<br />
+<label>Rettangolo</label>
+<br />
+<br />
+<button (click)="brown()">brown</button>
+<button (click)="violet()">violet</button>
+<button (click)="white()">white</button>

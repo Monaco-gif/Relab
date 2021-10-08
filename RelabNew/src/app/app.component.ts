@@ -16,6 +16,7 @@ export class AppComponent {
   label: string;
   circleOptions: { fillColor: string; };
   circleOptions2: { fillColor: string; };
+  circleOptions3: { fillColor: string; };
   position2: { lat: number; lng: number; };
   position3: { lat: number; lng: number; };
   vertices: google.maps.LatLngLiteral[];
@@ -28,6 +29,7 @@ export class AppComponent {
     this.label = "Sei Qui";
     this.circleOptions = { fillColor: 'red' }
     this.circleOptions2 = { fillColor: 'blue' }
+    this.circleOptions3 = { fillColor: 'magenta' }
 
     let iconData: google.maps.Icon = {
       url: './assets/img/cat_acrobat.ico',
@@ -61,26 +63,38 @@ export class AppComponent {
     ];
   }
 
-  yellow() {
-    this.circleOptions = { fillColor: 'yellow' }
-  }
-  black() {
-    this.circleOptions = { fillColor: 'black' }
-  }
-  green() {
-    this.circleOptions = { fillColor: 'green' }
-  }
-
+  // cerchio grande
   pink() {
-    this.circleOptions2 = { fillColor: 'pink' }
+    this.circleOptions = { fillColor: 'pink' }
   }
   purple() {
-    this.circleOptions2 = { fillColor: 'purple' }
+    this.circleOptions = { fillColor: 'purple' }
   }
   orange() {
-    this.circleOptions2 = { fillColor: 'orange' }
+    this.circleOptions = { fillColor: 'orange' }
   }
 
+  // cerchio piccolo
+  yellow() {
+    this.circleOptions2 = { fillColor: 'yellow' }
+  }
+  black() {
+    this.circleOptions2 = { fillColor: 'black' }
+  }
+  green() {
+    this.circleOptions2 = { fillColor: 'green' }
+  }
+
+  // rettangolo
+  brown() {
+    this.circleOptions3 = { fillColor: 'brown' }
+  }
+  violet() {
+    this.circleOptions3 = { fillColor: 'violet' }
+  }
+  white() {
+    this.circleOptions3 = { fillColor: 'white' }
+  }
 
 }
 
