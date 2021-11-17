@@ -37,9 +37,18 @@ def get_vettore(foglio):
     query = {
         "FOGLIO" : foglio
     }
-    for s in mil4326WKT.find(query).limit(100):
-        output.append(s['CI_VETTORE'])
-    return jsonify({'result': output})
+    for s in mil4326WKT.find(query):
+        output.append({
+            "INDIRIZZO":s['INDIRIZZO'],
+            "WGS84_X":s["WGS84_X"],
+            "WGS84_Y":s["WGS84_Y"],
+            "CLASSE_ENE":s["CLASSE_ENE"],
+            "EP_H_ND":s["EP_H_ND"],
+            "FOGLIO":s["FOGLIO"],
+            "CI_VETTORE":s['CI_VETTORE']
+        }
+        )
+    return jsonify(output) #Nota che abbiamo eliminato la chiave result perchè i dati sono già formattati
 
 # Checks to see if the name of the package is the run as the main package.
 if __name__ == "__main__":
